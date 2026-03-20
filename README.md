@@ -93,7 +93,3 @@ For a quick overview of the project, start with:
 
 ## Author
 Daniel Padilla
-
-Daniel Padilla
-
-Graduate time series course project.
