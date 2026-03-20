@@ -1,0 +1,1 @@
+window.metaData = [{"Region":"All California","panel":"panels/panel/All California.png"},{"Region":"Northern CA Hotspot","panel":"panels/panel/Northern CA Hotspot.png"},{"Region":"Southern CA Hotspot","panel":"panels/panel/Southern CA Hotspot.png"}]

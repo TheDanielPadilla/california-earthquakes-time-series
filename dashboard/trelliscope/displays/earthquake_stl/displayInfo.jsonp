@@ -1,0 +1,55 @@
+__loadDisplayInfo__39b16103({
+  "name": "earthquake_stl",
+  "description": "Regional STL decomposition (Trend, Seasonality)",
+  "tags": [],
+  "keycols": ["Region"],
+  "metas": [
+    {
+      "maxnchar": 19,
+      "sortable": true,
+      "filterable": true,
+      "tags": [],
+      "label": "Region",
+      "type": "string",
+      "varname": "Region"
+    },
+    {
+      "source": {
+        "isLocal": true,
+        "type": "file"
+      },
+      "aspect": 1.33333333333333,
+      "paneltype": "img",
+      "maxnchar": 0,
+      "sortable": false,
+      "filterable": false,
+      "tags": [],
+      "label": "panel",
+      "type": "panel",
+      "varname": "panel"
+    }
+  ],
+  "state": {
+    "layout": {
+      "viewtype": "grid",
+      "sidebarActive": false,
+      "page": 1,
+      "ncol": 3,
+      "type": "layout"
+    },
+    "labels": {
+      "varnames": ["Region"],
+      "type": "labels"
+    },
+    "sort": [],
+    "filter": [],
+    "filterView": []
+  },
+  "views": [],
+  "inputs": null,
+  "primarypanel": "panel",
+  "thumbnailurl": "panels/panel/All California.png",
+  "infoOnLoad": false,
+  "hasCustomInfo": false,
+  "order": 0
+})

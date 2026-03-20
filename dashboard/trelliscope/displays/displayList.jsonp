@@ -1,0 +1,30 @@
+__loadDisplayList__39b16103([
+  {
+    "name": "earthquake_ets",
+    "description": "Regional ETS state-space decomposition (Error, Trend, Seasonality)",
+    "tags": [],
+    "thumbnailurl": "panels/panel/All California.png",
+    "order": 0
+  },
+  {
+    "name": "earthquake_forecasts",
+    "description": "Historical data overlaid with ARIMA/ETS Forecasts",
+    "tags": [],
+    "thumbnailurl": "panels/panel/All California_arima.png",
+    "order": 0
+  },
+  {
+    "name": "earthquake_residuals",
+    "description": "Diagnostic residual plots for statistical validation",
+    "tags": [],
+    "thumbnailurl": "panels/panel/All California_arima.png",
+    "order": 0
+  },
+  {
+    "name": "earthquake_stl",
+    "description": "Regional STL decomposition (Trend, Seasonality)",
+    "tags": [],
+    "thumbnailurl": "panels/panel/All California.png",
+    "order": 0
+  }
+])
