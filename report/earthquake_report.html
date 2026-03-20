@@ -9,7 +9,7 @@
 <meta name="author" content="Daniel Padilla">
 <meta name="dcterms.date" content="2026-03-20">
 
-<title>Spatiotemporal Forecasting of California Earthquakes</title>
+<title>California Earthquakes Time Series Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -78,7 +78,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Spatiotemporal Forecasting of California Earthquakes</h1>
+<h1 class="title">California Earthquakes Time Series Analysis</h1>
 <p class="subtitle lead">An ARIMA and Spectral Approach to Seismic Activity</p>
 </div>
 
@@ -108,9 +108,19 @@ window.Quarto = {
 </header>
 
 
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ul>
+<li>hotspot mapping identifies the Mendocino Triple Junction and Salton Sea/Brawley zone as key localized regions</li>
+<li>STL suggests little meaningful seasonality</li>
+<li>ACF supports clustering/autoregressive behavior</li>
+<li>the smoothed periodogram does not support annual seasonality</li>
+<li>ARIMA and ETS forecasts both show mean reversion, with much wider uncertainty for the northern hotspot than the southern one.</li>
+</ul>
+</section>
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>This report presents a comprehensive time series analysis of earthquake frequencies in California from 2014 to 2024. Utilizing the U.S. Geological Survey (USGS) Earthquake Catalog API, spatial data bounding boxes were constructed to subset the overall California seismic activity into distinct regional hotspots (Northern California Coast and the Salton Sea area). We conduct exploratory spatial mapping, alongside a rigorous comparison of Time Domain modeling (STL Decomposition, Autocorrelation) against Spectral Domain analysis (Smoothed Periodograms). Finally, we specify Auto-Regressive Integrated Moving Average (ARIMA) and structural State-Space models (ETS) to forecast baseline expected earthquake event counts for the proceeding twelve months.</p>
+<p>This report presents a comprehensive time series analysis of earthquake frequencies in California from 2014 to 2024. Utilizing the U.S. Geological Survey (USGS) Earthquake Catalog API, spatial data bounding boxes were constructed to subset the overall California seismic activity into distinct regional hotspots (Northern California Coast and the Salton Sea area). We conduct exploratory spatial mapping, alongside a rigorous comparison of Time Domain modeling (STL Decomposition, Autocorrelation) against Spectral Domain analysis (Smoothed Periodograms). Finally, we specify Auto-Regressive Integrated Moving Average (ARIMA) and structural State-Space models (ETS) to forecast baseline expected earthquake event counts for the following twelve months. The response variable is the monthly number of earthquakes with magnitude 3.0 or greater, modeled separately for all California, the northern hotspot, and the southern hotspot.</p>
 <hr>
 </section>
 <section id="introduction-data-acquisition" class="level2">
@@ -133,6 +143,7 @@ window.Quarto = {
 <li><strong>Northern California Hotspot:</strong> The Mendocino Triple Junction.</li>
 <li><strong>Southern California Hotspot:</strong> The Salton Sea / Brawley Seismic Zone.</li>
 </ul>
+<p>These zones were chosen because they both show a dense zone on the KDE heatmap, and are geographically located in areas that are reasonable representations of earthquakes in Northern California and Southern California respectively.</p>
 <hr>
 </section>
 </section>
@@ -180,7 +191,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>If seismic activity correlated with the calendar year, we would expect a massive spike in the Spectral Density curve at fundamental frequency <span class="math inline">\(1/12 \approx 0.0833\)</span> (one cycle per 12 months). The periodograms above prove that the density at the annual mark is negligible.</p>
+<p>If seismic activity correlated with the calendar year, we would expect a pronounced peak in the Spectral Density curve at fundamental frequency <span class="math inline">\(1/12 \approx 0.0833\)</span> (one cycle per 12 months). The periodograms above suggest that the density at the annual mark is negligible.</p>
 <p>Furthermore, the spectral density peaking near Frequency 0 and slowly decaying is the textbook spectral fingerprint of an Autoregressive (AR) process, aligning perfectly with the autocorrelation findings.</p>
 <hr>
 </section>
@@ -213,9 +224,14 @@ window.Quarto = {
 </div>
 <hr>
 </section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<p>Earthquake counts are only one summary of seismic activity. While ARIMA/ETS are useful baseline models, they do not capture the physical mechanisms of tectonic plate movement. Furthermore, data was aggregated monthly which may smooth short-term dynamics. Lastly, it may be more appropriate to fit count data using a Poisson or negative-binomial model.</p>
+<hr>
+</section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>This project demonstrates the power of fusing Geographic Information Systems (GIS) with advanced Time Series techniques. By mapping the raw events, subsetting the data spatially, and deploying models across both the Time and Spectral domains, we can empirically invalidate calendar seasonality while accurately modeling the autoregressive reality of earthquake cluster sequences.</p>
+<p>This project demonstrates the power of fusing Geographic Information Systems (GIS) with advanced Time Series techniques. After mapping the raw events, subsetting the data spatially, and deploying models across both the Time and Spectral domains, we find little evidence for calendar seasonality while accurately modeling the autoregressive reality of earthquake cluster sequences.</p>
 <hr>
 </section>
 <section id="appendix-r-code-repository" class="level2">

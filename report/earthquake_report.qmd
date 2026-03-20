@@ -77,7 +77,7 @@ knitr::include_graphics("../figures/california_earthquake_heatmap.png")
     Zone.
 
 These zones were chosen because they both show a dense zone on the KDE
-heatmap, and are geographically distant enough to be accurate
+heatmap, and are geographically located in areas that are reasonable
 representations of earthquakes in Northern California and Southern
 California respectively.
 
