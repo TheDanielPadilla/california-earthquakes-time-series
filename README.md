@@ -49,17 +49,17 @@ Two hotspot regions were identified through kernel density estimation:
 
 ## Selected Figures
 
-### Heatmap of California Earthquake Activity
-![Heatmap of California earthquake activity](figures/california_earthquakes_heatmap.png)
+<h3>California Earthquake Heatmap</h3>
+<img src="figures/california_earthquake_heatmap.png" alt="California earthquake heatmap" width="700">
 
-### STL Decomposition of Monthly Earthquake Counts
-![STL decomposition of monthly earthquake counts](figures/stl_decomposition.png)
+<h3>STL Decomposition</h3>
+<img src="figures/stl_decomposition.png" alt="STL decomposition" width="700">
 
-### Autocorrelation Function
-![Autocorrelation function plot](figures/acf_plot.png)
+<h3>Autocorrelation Function</h3>
+<img src="figures/acf_plot.png" alt="ACF plot" width="700">
 
-### Forecast of Earthquake Counts
-![Forecast of earthquake counts](figures/forecast_plot.png)
+<h3>Forecast Plot</h3>
+<img src="figures/forecasts_plot.png" alt="Forecast plot" width="700">
 
 ## Key Findings
 
