@@ -47,6 +47,20 @@ Two hotspot regions were identified through kernel density estimation:
 ### Dashboard
 - Trelliscope dashboard scripts for interactive exploration of earthquake patterns
 
+## Selected Figures
+
+### Heatmap of California Earthquake Activity
+![Heatmap of California earthquake activity](figures/california_earthquakes_heatmap.png)
+
+### STL Decomposition of Monthly Earthquake Counts
+![STL decomposition of monthly earthquake counts](figures/stl_decomposition.png)
+
+### Autocorrelation Function
+![Autocorrelation function plot](figures/acf_plot.png)
+
+### Forecast of Earthquake Counts
+![Forecast of earthquake counts](figures/forecast_plot.png)
+
 ## Key Findings
 
 - Earthquake activity is spatially concentrated in a small number of California hotspot regions.
