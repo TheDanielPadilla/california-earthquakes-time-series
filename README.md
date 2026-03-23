@@ -1,6 +1,6 @@
 # California Earthquakes Time Series
 
-A graduate level time series project analyzing earthquake activity in California from 2014 to 2024 using spatial visualization, time-domain analysis, spectral methods, forecasting, and a Trelliscope dashboard.
+A graduate-level time series project analyzing earthquake activity in California from 2014 to 2024 using spatial visualization, time-domain analysis, spectral methods, forecasting, and a Trelliscope dashboard.
 
 ## Overview
 
@@ -90,12 +90,12 @@ Two hotspot regions were identified through kernel density estimation:
 
 ## Tools
 
-This project was completed in **R** using packages for:
-- data access
-- spatial analysis
-- visualization
-- time series modeling
-- dashboard development
+This project was completed in **R** using packages including:
+- `httr2`
+- `sf`
+- `ggplot2`
+- `fpp3`
+- `TrelliscopeJS` or related dashboard packages
 
 ## Files to Start With
 
